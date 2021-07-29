@@ -1,0 +1,38 @@
+.img1 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.AboutMe {
+    position: relative;
+}
+
+.modern {
+    font-size: 60px;
+    text-shadow: rgb(0 0 0) 5px 5px 5px;
+    font-weight: 900;
+    color: white;
+    padding-top: 150px;
+}
+
+.lift {
+    font-size: 22px;
+    margin: 10px 0px 0px;
+    font-weight: 700;
+    color: white;
+}
+
+
+.AboutMe2 {
+    position: absolute;
+    top: 600px;
+}
+
+.abouut {
+    border-bottom: 2px solid black;
+    margin-left: 350px;
+    width: 300px;
+}
