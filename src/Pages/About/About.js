@@ -1,15 +1,14 @@
 import "./About.css"
 import React from 'react'
+import Container from "../../containers/Container";
 
 const About = () => {
     return (
-        <div className="container">
-            <img src="https://osten-co.uz/images/index/about.jpg" alt="" className="img1"/>
-           <div className="AboutMe">
-                <h1 className="modern">MODERN LIFT SYSTEMS</h1>
-                <p className="lift">Крупная лифтостроительная компания в Узбекистане!</p>
-           </div>
-        </div>
+        <Container>
+            <div className="container">
+                <h1>Мобильные приложения</h1>
+            </div>
+        </Container>
     )
 }
 

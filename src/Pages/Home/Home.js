@@ -1,18 +1,46 @@
 import "./Home.css"
 import React from 'react'
+import Container from "../../containers/Container";
+import { Link } from "react-router-dom";
+
+const categories = [
+    {
+        icon: "https://categories.olxcdn.com/assets/categories/olxuz/detskiy-mir-36-2x.png",
+        backColor: "rgb(255, 206, 50)",
+        title: "Детский мир",
+        to: "detskiy-mir"
+    },
+    {
+        icon: "https://categories.olxcdn.com/assets/categories/olxuz/transport-3-2x.png",
+        backColor: "rgb(35, 229, 219)",
+        title: "Транспорт",
+        to: "transport"
+    },
+    {
+        icon: "https://categories.olxcdn.com/assets/categories/olxuz/rabota-6-2x.png",
+        backColor: "#ff5636 ",
+        title: "Работа",
+        to: "rabota"
+    }
+   
+]
 
 const Home = () => {
     return (
-        <div className="container">
-            <img src="https://osten-co.uz/images/index/home.jpg" alt=""  className="ostinimg"/>
-            <div className="HomePage">
-                <div className="HomePageText">
-                        <h1 className="ostinText" size="sm">«Osten» — уникальный производитель, лифтов и эскалаторов в Средней Азии</h1>
-                        <p className="HomePageText2">Компания «Osten» была основана в 2019 году!</p>
-                        <button className="btn" size="sm">ПОДРОБНЕ</button>
-                </div>
-            </div>         
-        </div>
+        <Container>
+            <div className="container">
+
+                <h1 className="text-center py-3">Главные категории</h1>
+                {categories.map(v =>
+                    <Link to={v.to} key={v.to} className="category">
+                        <div className="icon" style={{ backgroundColor: v.backColor }}>
+                            <img src={v.icon} alt=""className="img2" />
+                        </div>
+                        {v.title}
+                    </Link>)
+                }
+            </div>
+        </Container>
     )
 }
 
